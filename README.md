@@ -5,8 +5,9 @@ Start the project locally
 
 Start the Project
 ========================
-- cd onedotdictionarymanagement/
-  npm start
+- cd onedotdictionarymanagement
+- npm install
+- npm start
   
 Port visit
 ==============
