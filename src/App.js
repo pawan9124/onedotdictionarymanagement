@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { hot } from "react-hot-loader";
 const Dashboard = lazy(() => import("./components/Dashboard/Dashboard"));
 const Landing = lazy(() => import("./components/Layout/Landing"));
-
+import Loader from "./components/Resuable/Loader";
 import store from "./store";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.min.js";
@@ -16,7 +16,7 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <Router>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Loader />}>
             <Switch>
               <Route exact path="/" component={Landing} />
             </Switch>

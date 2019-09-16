@@ -8,9 +8,9 @@
   },
   "scripts": {
     "build": "webpack -p",
-    "client": "webpack-dev-server",
+    "client": "webpack-dev-server --progress",
     "server": "json-server db.json --port 3001",
-    "start": "concurrently \"npm run server\" \"node_modules/.bin/webpack-dev-server --progress\""
+    "start": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Pawan Saket",
   "license": "ISC",
@@ -33,6 +33,7 @@
     "style-loader": "^1.0.0",
     "webpack": "^4.39.1",
     "webpack-bundle-analyzer": "^3.4.1",
+    "webpack-cli": "^3.3.8",
     "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {
